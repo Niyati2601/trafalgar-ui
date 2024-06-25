@@ -45,7 +45,7 @@ function Header(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box  sx={{ display: 'flex', width:'60vw', justifyContent:'center', margin:'auto'}} >
           <CssBaseline />
           <AppBar component="nav" sx={{ boxShadow: '0 0 0 0' }}>
               <Toolbar sx={{ backgroundColor: 'white', padding: 5 }}>

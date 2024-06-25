@@ -154,14 +154,15 @@ import image7 from '../assets/section-4-1.png';
 import image8 from '../assets/section-4-2.png';
 import image9 from '../assets/section-4-3.png';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import group from '../assets/Group.png';
 
 function Main() {
   return (
-    <>
+    <Box sx={{overflow:'hidden',position:'relative'}}>
       {/* Virtual healthcare section */}
       <Box sx={{ marginTop: 20 }}>
         <img src={image2} alt='element' style={{ width: '60px', height: '80px' }} />
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, width:'60vw', display:'flex', justifyContent:'center', margin:'auto' }}>
           <Grid container spacing={4} alignItems="center">
             {/* Image on left, text on right */}
 
@@ -177,19 +178,19 @@ function Main() {
               </Button>
             </Grid>
             <Grid item xs={12} md={6}>
-              <img src={image1} alt='Virtual healthcare' style={{ width: '60%', height: 'auto' }} />
+              <img src={image1} alt='Virtual healthcare' style={{ width: '100%', height: 'auto' }} />
             </Grid>
           </Grid>
         </Box>
       </Box>
 
-      {/* Our Services section */}
-      <Box sx={{ marginTop: 20, padding: 4, position: 'relative' }}>
-        {/* Vector image */}
-        <img src={vector} alt='vector' style={{ position: 'absolute', marginTop: 175, left: 0, zIndex: -1 }} />
-        {/* Element1 image */}
-        <img src={element1} alt='element1' style={{ position: 'absolute', right: 0, marginRight: 90, marginTop: 500, zIndex: -1 }} />
+        <img src={vector} alt='vector' style={{ position: 'absolute', marginTop: 350, left: 0, zIndex: -1 }} />
 
+        <img src={element1} alt='element1' style={{ position: 'absolute', right: 0, marginRight: 350, marginTop: 720, zIndex: -1 }} />
+
+
+      {/* Our Services section */}
+      <Box sx={{ position: 'relative', width:'60vw', margin:'auto',marginTop: 20, padding: 4 }}>
         <Typography variant="h2" sx={{ textAlign: 'center', zIndex: 1, position: 'relative' }}>
           Our Services
         </Typography>
@@ -197,10 +198,9 @@ function Main() {
         <Typography variant="body1" sx={{ textAlign: 'center', marginBottom: 4, zIndex: 1, position: 'relative' }}>
           We provide you with the best choices for your health needs and ensure your treatment is guided by highly qualified doctors.
         </Typography>
-
-        <Grid container spacing={2} justifyContent="center">
+        <Grid container spacing={2} justifyContent="center" >
           {[service1, service2, service3, service4, service5, service6].map((service, index) => (
-            <Grid item xs={12} md={4} key={index} display="flex" justifyContent="center">
+            <Grid item xs={12} md={4} key={index} display="flex" justifyContent="center" marginTop="50px">
               <Card sx={{ width: '400px', height: '354px', boxShadow: '10px 40px 50px 0px #E5E9F666', borderRadius: '20px' }}>
                 <CardMedia
                   component="img"
@@ -236,11 +236,11 @@ function Main() {
       </Box>
 
       {/* Leading healthcare providers section */}
-      <Box sx={{ marginTop: 20 }}>
+      <Box sx={{width:'60vw', display:'flex', justifyContent:'center', margin:'auto', marginTop: 20 }}>
         <Grid container spacing={4} alignItems="center">
           {/* Image on left, text on right */}
           <Grid item xs={12} md={6} display="flex" justifyContent="center">
-            <img src={image4} alt='Leading healthcare providers' style={{ width: '60%', height: 'auto' }} />
+            <img src={image4} alt='Leading healthcare providers' style={{ width: '100%', height: 'auto' }} />
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="h2" sx={{ textAlign: { xs: 'center', md: 'left' }, marginLeft: { xs: 2, md: 0 } }}>
@@ -255,7 +255,7 @@ function Main() {
           </Grid>
         </Grid>
       </Box>
-
+      <img src={element1} alt='element1' style={{  display:'flex',position: 'relative', left: '96%', zIndex: -1 }} />
       {/* Download our mobile apps section */}
       <Box sx={{ marginTop: 20 }}>
         <Grid container spacing={4} alignItems="center">
@@ -279,12 +279,15 @@ function Main() {
       <Box sx={{
         background: 'linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%)',
         padding: '40px 20px',
-        width: '80vw',
+        width: '60vw',
         justifyContent: 'center',
         margin: 'auto',
-        marginTop: 10,
-        borderRadius: '24px'
+        marginTop: 20,
+        borderRadius: '24px',
+        position:'relative',
       }}>
+        <img src={element1} alt='element1' style={{ position: 'absolute', top: 0, left: 0, marginLeft: -50, marginTop: 150, zIndex: -1, overflow:'hidden' }} />
+        <img src={group} alt='element1' style={{ position: 'absolute', top: 0, right:-50, zIndex: 1, marginTop:-10, overflow:'hidden' }} />
         <Grid container spacing={4} alignItems="center" justifyContent="center">
           <Grid item xs={12} md={8}>
             <Typography variant="h4" sx={{ textAlign: 'center', color: 'common.white', marginBottom: 2 }}>
@@ -314,18 +317,19 @@ function Main() {
       </Box>
       <img src={image6} alt='image6' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', margin: 'auto', marginTop: 5 }} />
 
-      <Box sx={{ marginTop: 20, padding: 4, position: 'relative', overflow:'hidden' }}>
       {/* Vector image */}
-      <img src={vector} alt='vector' style={{ position: 'absolute', top: 0, right: -300, zIndex: -1, transform: 'rotate(180deg)' }} />
+      <img src={vector} alt='vector' style={{ position: 'absolute', top: 'auto', right: -200, zIndex: -1, marginTop:220, transform: 'rotate(180deg)' }} />
       {/* Element1 image */}
-      <img src={element1} alt='element1' style={{ position: 'absolute', top: 0, left: 0, marginLeft: 120, marginTop: 80, zIndex: -1 }} />
+      <img src={element1} alt='element1' style={{ position: 'absolute', top: 'auto', left: 100, marginLeft: 250, marginTop: 300, zIndex: -1 }} />
+      
+      <Box sx={{ position: 'relative', overflow:'hidden', width:'60vw', margin:'auto',marginTop: 20, padding: 4,  }}>
 
       <Typography variant="h3" sx={{ textAlign: 'center', zIndex: 1, position: 'relative' }}>
         Check out our latest article
       </Typography>
       <Divider variant="middle" sx={{ width: '100px', backgroundColor: '#000', margin: '16px auto', zIndex: 1, position: 'relative' }} />
 
-      <Grid container spacing={2} justifyContent="center">
+      <Grid container spacing={4} justifyContent="center" marginTop={"50px"}>
         <Grid item xs={12} md={4} display="flex" justifyContent="center">
           <Card sx={{ width: '350px', borderRadius: '20px', height:'500px' }}>
             <CardActionArea>
@@ -416,7 +420,7 @@ function Main() {
 
     {/* Footer */}
     
-    </>
+    </Box>
   );
 }
 

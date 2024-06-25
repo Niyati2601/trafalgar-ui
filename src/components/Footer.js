@@ -1,6 +1,7 @@
 import { Box, Grid, Link, Typography } from '@mui/material'
 import React from 'react'
 import logo from '../assets/logo.png';
+import element1 from '../assets/element-1.png';
 
 const Footer = () => {
   return (
@@ -9,9 +10,12 @@ const Footer = () => {
       background: 'linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%)',
       padding: '40px 20px',
       marginTop: 10,
-      color: '#fff'
+      color: '#fff',
+      position:'relative',
     }}
   >
+     <img src={element1} alt='element1' style={{ position: 'absolute', top: 0, left: 0, marginLeft: -10, marginTop: 150, zIndex: 1, overflow:'hidden' }} />
+     <img src={element1} alt='element1' style={{ position: 'absolute', top: 0, right: 40, zIndex: 1, marginTop:-80, overflow:'hidden' }} />
     <Grid container spacing={4} justifyContent="center">
       <Grid item xs={12} md={3}>
         <Box display="flex" alignItems="center">
